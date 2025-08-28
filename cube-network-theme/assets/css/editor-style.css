@@ -1,0 +1,155 @@
+/* Editor Styles for Cube Network Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* CSS Variables matching the theme */
+:root {
+    --background: hsl(220, 25%, 8%);
+    --foreground: hsl(210, 40%, 95%);
+    --card: hsl(220, 25%, 12%);
+    --neon-blue: hsl(195, 100%, 60%);
+    --neon-green: hsl(140, 100%, 60%);
+    --primary: hsl(195, 100%, 60%);
+    --muted-foreground: hsl(210, 20%, 70%);
+    --border: hsl(220, 20%, 25%);
+    --cube-gradient: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+}
+
+/* Editor body styling */
+.wp-editor {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+}
+
+/* Headings */
+.wp-editor h1,
+.wp-editor h2,
+.wp-editor h3,
+.wp-editor h4,
+.wp-editor h5,
+.wp-editor h6 {
+    font-family: 'Orbitron', monospace;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.wp-editor h1 {
+    font-size: 2.5rem;
+    background: var(--cube-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.wp-editor h2 {
+    font-size: 2rem;
+}
+
+.wp-editor h3 {
+    font-size: 1.5rem;
+}
+
+/* Paragraphs */
+.wp-editor p {
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+/* Links */
+.wp-editor a {
+    color: var(--primary);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.wp-editor a:hover {
+    color: var(--neon-green);
+}
+
+/* Lists */
+.wp-editor ul,
+.wp-editor ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    color: var(--foreground);
+}
+
+/* Blockquotes */
+.wp-editor blockquote {
+    border-left: 4px solid var(--primary);
+    padding: 1rem 1.5rem;
+    background: var(--card);
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--muted-foreground);
+}
+
+/* Code */
+.wp-editor code {
+    background: var(--card);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
+    color: var(--neon-green);
+}
+
+.wp-editor pre {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+}
+
+/* Tables */
+.wp-editor table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: var(--card);
+}
+
+.wp-editor th,
+.wp-editor td {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+.wp-editor th {
+    background: var(--primary);
+    color: var(--background);
+    font-weight: 700;
+}
+
+/* Images */
+.wp-editor img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Buttons (if used in content) */
+.wp-editor .btn,
+.wp-editor button {
+    background: var(--cube-gradient);
+    color: var(--background);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.wp-editor .btn:hover,
+.wp-editor button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--primary);
+}
